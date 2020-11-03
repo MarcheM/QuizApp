@@ -4,6 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAflUq88j_iADrxWwKlG1s6frCgJPxs4RY",
+  authDomain: "quiz-56bc5.firebaseapp.com",
+  databaseURL: "https://quiz-56bc5.firebaseio.com",
+  projectId: "quiz-56bc5",
+  storageBucket: "quiz-56bc5.appspot.com",
+  messagingSenderId: "727150599646",
+  appId: "1:727150599646:web:04cd72c721b80fd0d6d14f",
+  measurementId: "G-W8NR0S438R"
+};
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

@@ -1,11 +1,11 @@
 import React from 'react'
-import PageWrapper from './PageWrapper'
+
 
 
 const MainPage = () => {
-    return <PageWrapper title="Witaj na mojej stronie">
-
-    </PageWrapper>
+    return <div style={{ backgroundColor: 'white', margin: "0 auto", width: "100%", maxWidth: '1400px' }}>
+        <h1>Witaj na mojej stronie</h1>
+    </div>
 
 }
 

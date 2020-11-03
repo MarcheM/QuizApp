@@ -1,37 +1,53 @@
+.bg{
+    background-color: black;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .mainWrapper{
     width: 100%;
     max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 15px;
-    padding-bottom: 15px;
     background-color: orange;
-    border-radius: 0 0 8px 8px; 
-
+    border-radius: 8px; 
+    
     display: flex;
     justify-content: space-between;  
-
-    position: sticky;
+    align-items: center;
 }
 
 .menu{
     display: flex;
-    height: 100%;
 }
 
 .loginMenu{
-   justify-content: flex-end;
-   height: 100%;
+    justify-content: flex-end;
 }
 
-.menuItem{
+.menuItem{ 
     margin: 0 16px;
     padding: 15px;
     border-radius: 8px;
     transition: background-color 0.5s ease;
 }
 
+.links{
+    text-decoration: none;
+    color: black;
+}
+
 .menuItem:hover{
     background-color: beige;
     cursor: pointer;
+}
+
+@media (max-width: 756px){
+    .bg{
+        background-color: orange;
+        border-radius: 0 0 8px 8px;
+    }
+    .menuItem{
+        padding: 12px 2px;
+    } 
 }
