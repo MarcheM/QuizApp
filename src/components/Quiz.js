@@ -1,5 +1,5 @@
 import React from 'react'
-
+import MainContent from './MainContent'
 class Quiz extends React.Component {
     state = {
         quizList: [],
@@ -33,19 +33,19 @@ class Quiz extends React.Component {
     }
 
     render() {
-        console.log(this.state.quizList)
+
         if (this.state.isLoading) {
-            return <h1>loading...</h1>
+            return <MainContent><h1>loading...</h1></MainContent>
         }
 
-        return <>
+        return <MainContent>
             <h1>Quizy</h1>
             {
-                this.state.quizList.map(quiz => <div>{quiz.ques1}</div>)
+                this.state.quizList.map(quiz => <div>{quiz.category}</div>)
             }
+        </MainContent>
 
 
-        </>
     }
 }
 

@@ -1,11 +1,11 @@
 import React from 'react'
-
+import MainContent from './MainContent'
 
 
 const MainPage = () => {
-    return <div style={{ backgroundColor: 'white', margin: "0 auto", width: "100%", maxWidth: '1400px' }}>
+    return <MainContent>
         <h1>Witaj na mojej stronie</h1>
-    </div>
+    </MainContent>
 
 }
 
