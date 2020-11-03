@@ -37,6 +37,9 @@
 }
 
 @media (max-width: 756px){
+    .menuWrapper{
+        margin-top: 1rem;
+    }
     .menuItem{
         padding: 12px 2px;
     } 
