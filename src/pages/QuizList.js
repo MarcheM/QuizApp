@@ -1,7 +1,7 @@
 import React from 'react'
-import MainContent from '../templates/MainContent'
-import QuizCategoryCard from './QuizCategoryCard'
-import Spinner from './Spinner'
+import MainContent from '../components/templates/MainContent'
+import QuizCategoryCard from '../components/molecules/QuizCategoryCard'
+import Spinner from '../components/atoms/Spinner'
 
 
 class QuizList extends React.Component {

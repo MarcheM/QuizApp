@@ -1,6 +1,6 @@
 import React from "react"
 import { DATABASE_URL } from '../index'
-import MainContent from '../templates/MainContent'
+import MainContent from '../components/templates/MainContent'
 
 class SingleQuiz extends React.Component {
 

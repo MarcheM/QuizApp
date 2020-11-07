@@ -1,5 +1,5 @@
 import React from 'react'
-import MainContent from '../templates/MainContent'
+import MainContent from '../components/templates/MainContent'
 
 const LogIn = () => {
     return <MainContent title="Logowanie">
