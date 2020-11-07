@@ -1,7 +1,10 @@
 import React from 'react'
 import MainContent from '../templates/MainContent'
 import QuizCategoryCard from './QuizCategoryCard'
-class Quiz extends React.Component {
+import Spinner from './Spinner'
+
+
+class QuizList extends React.Component {
     state = {
         quizList: [],
         isLoading: true
@@ -34,17 +37,16 @@ class Quiz extends React.Component {
     }
 
     render() {
-        console.log(this.state.quizList)
         if (this.state.isLoading) {
-            return <MainContent><h1>loading...</h1></MainContent>
+            return <MainContent title="Ładowanie..."><Spinner /></MainContent>
         }
 
-        return <MainContent>
-            <h1>Quizy</h1>
-            <div style={{ display: "flex", justifyContent: "space-evenly", flexWrap: "wrap" }}>
+        return <MainContent title="Quizy">
+
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "10px", padding: "10px", maxHeight: "70vh", overflow: "auto" }}>
                 {
                     this.state.quizList.map(quiz =>
-                        <QuizCategoryCard title={quiz.title} category={quiz.category.toUpperCase()} />
+                        <QuizCategoryCard key={quiz.id} id={quiz.id} title={quiz.title} category={quiz.category.toUpperCase()} />
                     )
 
                 }
@@ -55,4 +57,4 @@ class Quiz extends React.Component {
     }
 }
 
-export default Quiz
+export default QuizList

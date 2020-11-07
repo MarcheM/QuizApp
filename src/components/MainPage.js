@@ -3,8 +3,8 @@ import MainContent from '../templates/MainContent'
 
 
 const MainPage = () => {
-    return <MainContent>
-        <h1>Witaj na mojej stronie</h1>
+    return <MainContent title='Witaj na mojej stronie'>
+
     </MainContent>
 
 }
