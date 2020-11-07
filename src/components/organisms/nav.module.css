@@ -37,6 +37,10 @@
 }
 
 @media (max-width: 756px){
+    .mainWrapper{
+        width: 100%;
+        border-radius: 0px; 
+    }
     .menuWrapper{
         margin-top: 1rem;
     }

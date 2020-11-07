@@ -25,10 +25,11 @@ class SingleQuiz extends React.Component {
 
     render() {
 
-        // console.log(this.state.singleQuiz)
         return <MainContent title={this.state.singleQuiz.title}>
-            <div style={{ margin: "0 auto" }}>
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100%" }}>
+                <div style={{ width: "75%", height: "75%", backgroundColor: "orange" }}>
 
+                </div>
             </div>
         </MainContent>
 
