@@ -2,9 +2,10 @@
 .mainWrapper{
     width: 95%;
     max-width: 1400px;
+    position: sticky;
     background-color: #B6CFF9;
     border-radius: 8px; 
-    margin: 2rem auto 1rem auto;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;  
     align-items: center;

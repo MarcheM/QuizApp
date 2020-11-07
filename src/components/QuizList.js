@@ -43,7 +43,7 @@ class QuizList extends React.Component {
 
         return <MainContent title="Quizy">
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "10px", padding: "10px", maxHeight: "70vh", overflow: "auto" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: "10px", padding: "10px", height: "75vh", overflow: "auto" }}>
                 {
                     this.state.quizList.map(quiz =>
                         <QuizCategoryCard key={quiz.id} id={quiz.id} title={quiz.title} category={quiz.category.toUpperCase()} />
