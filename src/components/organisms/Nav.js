@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom'
 import styles from "./nav.module.css"
 
 
-
-
 const Nav = () => {
     return <div className={styles.mainWrapper}>
         <div className={styles.menu}>
