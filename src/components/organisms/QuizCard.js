@@ -11,6 +11,8 @@ const QuizCard = ({ protoQuiz, singleQuiz, quesNumber, children }) => {
                 return "yellow";
             case "trudny":
                 return "red";
+            default:
+                return 'none'
         }
 
     }

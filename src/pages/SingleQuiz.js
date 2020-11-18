@@ -9,10 +9,10 @@ import QuizAnswers from '../components/organisms/QuizAnswers'
 
 const SingleQuiz = (props) => {
 
-    const [protoQuiz, setProtoQuiz] = React.useState({})
-    const [singleQuiz, setSingleQuiz] = React.useState([])
-    const [quesNumber, setQuesNumber] = React.useState(0)
-    const [score, setScore] = React.useState(0)
+    const [protoQuiz, setProtoQuiz] = useState([])
+    const [singleQuiz, setSingleQuiz] = useState([])
+    const [quesNumber, setQuesNumber] = useState(0)
+    const [score, setScore] = useState(0)
 
     const fetchQuizData = () => {
         fetch(`${DATABASE_URL}/quiz/${props.match.params.id}.json`)
@@ -28,25 +28,38 @@ const SingleQuiz = (props) => {
                             }
                         })
                     : []
-
-
                 setProtoQuiz(quiz);
-                setSingleQuiz(arrayList)
-
+                setSingleQuiz(transformProto(arrayList))
             })
+    }
 
+    const transformProto = (array) => {
 
-
+        const newProto = array.map(question => {
+            const newArray = Object
+                .keys(question.ans)
+                .map(key => {
+                    return {
+                        id: key,
+                        ...question.ans[key]
+                    }
+                })
+            question.ans = newArray
+            return question
+        })
+        return newProto
     }
 
 
     useEffect(() => {
         fetchQuizData()
+
+
     }, [])
 
 
-    const handleOnAnswerClick = (ans) => {
-        if (ans) {
+    const handleOnAnswerClick = (correctId) => {
+        if (correctId) {
             const newScore = score + 1
             setScore(newScore)
         }
@@ -62,12 +75,9 @@ const SingleQuiz = (props) => {
             {singleQuiz.length > 0
                 ?
                 quesNumber !== singleQuiz.length
-                    ?
-                    <> <QuizCard protoQuiz={protoQuiz} singleQuiz={singleQuiz} quesNumber={quesNumber}>
+                    ? <QuizCard protoQuiz={protoQuiz} singleQuiz={singleQuiz} quesNumber={quesNumber}>
                         <QuizAnswers singleQuiz={singleQuiz} quesNumber={quesNumber} handleOnAnswerClick={handleOnAnswerClick} />
                     </QuizCard>
-                    </>
-
                     : <Score score={score} />
                 : <Spinner />
             }
