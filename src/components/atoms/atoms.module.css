@@ -1,3 +1,41 @@
-.input{
-    width: 70%;
+.textField {
+    position: relative;
+    margin: 10px auto 3rem auto;
+    width: 50%;
+    
+}
+
+input {
+    box-sizing: border-box;
+    border: solid 2px black;
+    width: 100%;
+    color: black;
+    background-color: #fafafa;
+    padding: 10px 10px;
+    border-radius: 4px;
+    
+}
+
+input:focus {
+        outline: none !important;
+        border: solid 2px red;
+        background-color: white;
+    }
+
+label {
+    color: #444;
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: 10px;
+    transition: 0.4s;
+}
+
+input:focus ~ label, input:valid ~ label {
+    top: -8px;
+    left: 15px;
+    color: black;
+    font-size: small;
+    background-color: lightblue;
+    padding:0 5px 0 5px;
 }
