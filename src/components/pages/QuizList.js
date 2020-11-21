@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import MainContent from '../components/templates/MainContent'
-import GridContainer from '../components/organisms/GridContainer'
-import Spinner from '../components/atoms/Spinner'
-import QuizCategoryCard from '../components/molecules/QuizCategoryCard'
+import MainContent from '..templates/MainContent'
+import GridContainer from '../organisms/GridContainer'
+import Spinner from '../atoms/Spinner'
+import QuizCategoryCard from '../molecules/QuizCategoryCard'
 
 
 const QuizList = () => {

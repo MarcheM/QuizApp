@@ -1,6 +1,6 @@
 import React from 'react';
-import MainContent from '../components/templates/MainContent'
-import Auth from '../components/organisms/Auth'
+import MainContent from '../templates/MainContent'
+import Auth from '../organisms/Auth'
 
 const CreateQuiz = () => {
     return (

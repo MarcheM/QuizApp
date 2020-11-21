@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { Redirect, Link } from 'react-router-dom'
-import MainContent from '../components/templates/MainContent'
-import QuizTemplate from '../components/templates/QuizTemplate'
-import Input from '../components/atoms/Input'
+import MainContent from '../templates/MainContent'
+import QuizTemplate from '../templates/QuizTemplate'
+import Input from '../atoms/Input'
 import firebase from 'firebase'
-import SignInGoogle from '../components/organisms/SignInGoogle'
+import SignInGoogle from '../organisms/SignInGoogle'
 
 const LogIn = (props) => {
 
@@ -64,12 +64,12 @@ const LogIn = (props) => {
 
                     <Input type="email" name="login" value={loginData.login} capture="Podaj maila" handleOnChange={handleOnChange} />
                     {!props.isReset && <Input type="password" name="password" value={loginData.password} capture="Wpisz hasło" handleOnChange={handleOnChange} />}
-                    <div style={{ width: "50%", margin: "0 auto" }}>
+                    <div style={{ width: "30%", margin: "0 auto" }}>
                         {props.isReset
-                            ? <button type="submit" style={{ width: "100%", padding: "1rem", borderRadius: "8px", backgroundColor: "yellow" }}>Resetuj hasło</button>
+                            ? <button type="submit" style={{ width: "100%", padding: "0.8rem", borderRadius: "8px", backgroundColor: "darkblue", color: "white" }}>Resetuj hasło</button>
                             : props.isSignUp
-                                ? <button type="submit" style={{ width: "100%", padding: "1rem", borderRadius: "8px", backgroundColor: "yellow" }}>Zarejestruj się</button>
-                                : <button type="submit" style={{ width: "100%", padding: "1rem", borderRadius: "8px", backgroundColor: "yellow" }}>Zaloguj</button>
+                                ? <button type="submit" style={{ width: "100%", padding: "0.8rem", borderRadius: "8px", backgroundColor: "darkblue", color: "white" }}>Zarejestruj się</button>
+                                : <button type="submit" style={{ width: "100%", padding: "0.8rem", borderRadius: "8px", backgroundColor: "darkblue", color: "white" }}>Zaloguj</button>
                         }
                     </div>
                 </form>

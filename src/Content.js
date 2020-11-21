@@ -1,10 +1,10 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-import MainPage from './pages/MainPage'
-import QuizList from './pages/QuizList'
-import SingleQuiz from './pages/SingleQuiz'
-import LogIn from './pages/LogIn'
-import CreateQuiz from './pages/CreateQuiz'
+import MainPage from './components/pages/MainPage'
+import QuizList from './components/pages/QuizList'
+import SingleQuiz from './components/pages/SingleQuiz'
+import LogIn from './components/pages/LogIn'
+import CreateQuiz from './components/pages/CreateQuiz'
 
 const Content = () => {
     return <Switch>
