@@ -1,17 +1,20 @@
 import React, { useState } from 'react'
+import { Redirect, Link } from 'react-router-dom'
 import MainContent from '../components/templates/MainContent'
 import QuizTemplate from '../components/templates/QuizTemplate'
 import Input from '../components/atoms/Input'
+import firebase from 'firebase'
+import SignInGoogle from '../components/organisms/SignInGoogle'
 
-const LogIn = () => {
+const LogIn = (props) => {
 
     const [loginData, setLoginData] = useState({
         login: "",
         password: ""
     })
+    const [redirect, setRedirect] = useState(false)
 
     const handleOnChange = (event) => {
-        console.log(event.target.value)
         setLoginData({
             ...loginData,
             [event.target.name]: event.target.value
@@ -20,10 +23,38 @@ const LogIn = () => {
 
     const handleOnSubmit = (event) => {
         event.preventDefault();
-        setLoginData({
-            login: "",
-            password: ""
-        })
+
+        if (props.isSignUp) {
+            firebase.auth()
+                .createUserWithEmailAndPassword(loginData.login, loginData.password)
+                .then(() => {
+                    setRedirect(true)
+                })
+                .catch((error) => {
+                    alert(error.message);
+                })
+        } else if (props.isReset) {
+            firebase.auth().sendPasswordResetEmail(loginData.login).then(function () {
+                alert(`Email został wysłany`)
+            }).catch(function (error) {
+                alert(error.message)
+            });
+        } else {
+            firebase.auth()
+                .signInWithEmailAndPassword(loginData.login, loginData.password)
+                .then((userData) => {
+                    setRedirect(true)
+                })
+                .catch((error) => {
+                    console.log(error)
+                    alert(error.message);
+                })
+        }
+
+    }
+
+    if (redirect) {
+        return <Redirect to='/' />
     }
 
     return <MainContent title="Logowanie">
@@ -32,13 +63,29 @@ const LogIn = () => {
                 <form onSubmit={handleOnSubmit}>
 
                     <Input type="email" name="login" value={loginData.login} capture="Podaj maila" handleOnChange={handleOnChange} />
-                    <Input type="password" name="password" value={loginData.password} capture="Wpisz hasło" handleOnChange={handleOnChange} />
+                    {!props.isReset && <Input type="password" name="password" value={loginData.password} capture="Wpisz hasło" handleOnChange={handleOnChange} />}
                     <div style={{ width: "50%", margin: "0 auto" }}>
-                        <button type="submit" style={{ width: "100%", padding: "1rem", borderRadius: "8px", backgroundColor: "yellow" }}>Zaloguj</button>
+                        {props.isReset
+                            ? <button type="submit" style={{ width: "100%", padding: "1rem", borderRadius: "8px", backgroundColor: "yellow" }}>Resetuj hasło</button>
+                            : props.isSignUp
+                                ? <button type="submit" style={{ width: "100%", padding: "1rem", borderRadius: "8px", backgroundColor: "yellow" }}>Zarejestruj się</button>
+                                : <button type="submit" style={{ width: "100%", padding: "1rem", borderRadius: "8px", backgroundColor: "yellow" }}>Zaloguj</button>
+                        }
                     </div>
                 </form>
-                <p>{loginData.login} </p>
-                <p>{loginData.password} </p>
+                <SignInGoogle />
+                <p>
+                    {props.isReset
+                        ? <>{<Link to='/signIn'>Masz konto? Zaloguj się</Link>}
+                            <span> / </span>
+                            {<Link to='/signUp'>Nie masz konta? Zarejestruj się</Link>}`</>
+                        : props.isSignUp
+                            ? <Link to='/signIn'>Masz konto? Zaloguj się</Link>
+                            : <Link to='/signUp'>Nie masz konta? Zarejestruj się</Link>
+                    }
+                    {!props.isReset && <Link to='/resetMail'> / Zapomniałeś hasła?</Link>}
+
+                </p>
             </div>
         </QuizTemplate>
     </MainContent >

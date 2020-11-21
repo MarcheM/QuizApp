@@ -17,6 +17,13 @@
 
 .loginMenu{
     justify-content: flex-end;
+    display: flex;
+}
+
+.hello{
+    margin: 0 16px;
+    padding: 15px;
+    border-radius: 8px;
 }
 
 .menuItem{ 
