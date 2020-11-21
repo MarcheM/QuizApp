@@ -1,6 +1,6 @@
 import React from 'react';
-import MainContent from '../components/templates/MainContent'
-import QuizTemplate from '../components/templates/QuizTemplate'
+import MainContent from '../templates/MainContent'
+import QuizTemplate from '../templates/QuizTemplate'
 
 const NotAuthorised = () => {
     return (
@@ -12,4 +12,4 @@ const NotAuthorised = () => {
     );
 }
 
-export default NotAuthorised;
+export default NotAuthorised

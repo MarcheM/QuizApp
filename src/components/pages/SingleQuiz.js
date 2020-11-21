@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { DATABASE_URL } from '../index'
+import { DATABASE_URL } from '../../index'
 import MainContent from '../templates/MainContent'
 import QuizTemplate from '../templates/QuizTemplate'
 import QuizCard from '../organisms/QuizCard'

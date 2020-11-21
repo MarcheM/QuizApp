@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import MainContent from '..templates/MainContent'
+import { DATABASE_URL } from '../../index'
+import MainContent from '../templates/MainContent'
 import GridContainer from '../organisms/GridContainer'
 import Spinner from '../atoms/Spinner'
 import QuizCategoryCard from '../molecules/QuizCategoryCard'
@@ -11,7 +12,7 @@ const QuizList = () => {
 
 
     const fetchData = () => {
-        fetch('https://quiz-56bc5.firebaseio.com/quiz.json')
+        fetch(`${DATABASE_URL}/quiz.json`)
             .then(res => res.json())
             .then(quiz => {
                 const listOfQuiz = quiz
