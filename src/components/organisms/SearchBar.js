@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { difficultyLevels } from '../../index'
+import SortForm from '../atoms/SortForm'
 
 const SearchBar = ({ categories, handleOnChange }) => {
 
@@ -23,28 +24,9 @@ const SearchBar = ({ categories, handleOnChange }) => {
     }, [searchConditions])
 
     return (
-        <div>
-            <form>
-                <label for="categories">kategoria:</label>
-                <select id="categories" name="categories" onChange={sortValue}>
-                    <option value={"none"}>Wybierz</option>
-                    {categories.map((category, index) => {
-                        return <option key={index} value={category}>{category}</option>
-                    })
-                    }
-                </select>
-            </form>
-            <form>
-                <label for="difficulty">poziom trudności:</label>
-                <select id="difficulty" name="difficulty" onChange={sortValue}>
-                    <option value={"none"}>Wybierz</option>
-                    {difficultyLevels.map((diffLevel, index) => {
-                        return <option key={index} value={diffLevel}>{diffLevel}</option>
-                    })
-                    }
-                </select>
-            </form>
-
+        <div style={{ display: "flex", justifyContent: "center" }}>
+            <SortForm array={categories} name="kategoria:" id="categories" sortFunction={sortValue} />
+            <SortForm array={difficultyLevels} name="poziom trudności:" id="difficulty" sortFunction={sortValue} />
         </div>
     )
 }

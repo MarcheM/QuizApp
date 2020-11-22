@@ -1,15 +1,19 @@
 import React from "react"
 import { Link } from "react-router-dom"
-
-const QuizCategoryCard = ({ id, title, category }) => {
+import styles from '../styles/quizCategoryCard.module.css'
+const QuizCategoryCard = ({ id, title, category, difficulty }) => {
     return (
 
         <Link to={`quizy/${id}`} style={{ color: 'black', textDecoration: "none" }}>
-            <div style={{ backgroundColor: "white", border: '1px solid black', }}>
-                <div>{category}</div>
+            <div className={styles.quizCard}>
+                <div className={styles.quizCardCover}>
+                    <div className={styles.quizCardWrapper}>
+                        <div className={styles.quizCardInfo}>{category}</div>
+                        <div className={styles.quizCardInfo}>{difficulty.toUpperCase()}</div>
+                    </div>
+                    <div><h3>{title}</h3></div>
 
-                <div><h3>{title}</h3></div>
-
+                </div>
             </div>
         </Link>
     )

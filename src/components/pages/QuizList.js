@@ -10,10 +10,6 @@ const QuizList = () => {
     const [quizList, setQuizList] = useState([])
     const [filteredList, setFilteredList] = useState([])
     const [isLoading, setIsLoading] = useState(false)
-    const [categorySort, setCategorySort] = useState("none")
-
-
-
 
     const fetchData = () => {
         setIsLoading(true)
@@ -80,7 +76,7 @@ const QuizList = () => {
         <GridContainer>
             {
                 filteredList.map(quiz =>
-                    <QuizCategoryCard key={quiz.id} id={quiz.id} title={quiz.title} category={quiz.category.toUpperCase()} />
+                    <QuizCategoryCard key={quiz.id} id={quiz.id} title={quiz.title} category={quiz.category.toUpperCase()} difficulty={quiz.diff} />
                 )
             }
         </GridContainer>
