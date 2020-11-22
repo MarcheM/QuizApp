@@ -53,9 +53,8 @@ const SingleQuiz = (props) => {
 
     useEffect(() => {
         fetchQuizData()
-
-
     }, [])
+
 
 
     const handleOnAnswerClick = (correctId) => {

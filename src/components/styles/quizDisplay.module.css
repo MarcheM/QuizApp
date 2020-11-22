@@ -1,16 +1,22 @@
-.answers{
-    font-size: 40px;
-    padding: 50px;
+.answers,
+.answersCorrect{
+    font-size: 30px;
+    padding: 40px;
     border: 2px solid #eee;
     cursor: pointer;
     border-radius: 16px;
+    background-color: transparent;
 }
 
 .answers:hover{
-    background-color: lightgreen;
+    background-color: orange;
     font-weight: bold;
 }
 
 .answers:active{
-    background-color: orange;
+    background-color: lightgreen;
+}
+
+.answersCorrect{
+    background-color: green;
 }

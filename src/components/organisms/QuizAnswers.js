@@ -1,8 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from '../styles/quizDisplay.module.css'
 
-
 const QuizAnswers = ({ singleQuiz, quesNumber, handleOnAnswerClick }) => {
+
+    const [isShowAnswer, setIsShowAnswer] = useState(false)
+    const [shufledAnswers, setShufledAnswers] = useState([])
+
+    useEffect(() => {
+        setShufledAnswers(shuffle(singleQuiz[quesNumber].ans))
+    }, [quesNumber])
+
+    useEffect(() => {
+        setTimeout(() => setIsShowAnswer(false), 700)
+    }, [isShowAnswer])
+
+    const onHandleOnAnswerClick = (answer) => {
+        setIsShowAnswer(true)
+        setTimeout(() => handleOnAnswerClick(answer), 800)
+    }
+
+
+
 
 
     function shuffle(array) {
@@ -20,16 +38,23 @@ const QuizAnswers = ({ singleQuiz, quesNumber, handleOnAnswerClick }) => {
             array[currentIndex] = array[randomIndex];
             array[randomIndex] = temporaryValue;
         }
-
         return array;
     }
 
+    const showCorrectAnswer = (answer) => {
+        const checkAnswer = isShowAnswer
+            ? answer
+                ? styles.answersCorrect
+                : styles.answers
+            : styles.answers
 
+        return checkAnswer
+    }
     return (
-        shuffle(singleQuiz[quesNumber].ans).map(ans => {
-            return <div key={ans.id} className={styles.answers} onClick={() => handleOnAnswerClick(ans.correct)}>
-                {ans.value}
-            </div>
+        shufledAnswers.map(ans => {
+            {
+                return <div key={ans.id} className={showCorrectAnswer(ans.correct)} onClick={() => onHandleOnAnswerClick(ans.correct)}>{ans.value}</div>
+            }
         })
     )
 
