@@ -76,9 +76,8 @@ const LogIn = (props) => {
                 <SignInGoogle />
                 <p>
                     {props.isReset
-                        ? <>{<Link to='/signIn'>Masz konto? Zaloguj się</Link>}
-                            <span> / </span>
-                            {<Link to='/signUp'>Nie masz konta? Zarejestruj się</Link>}`</>
+                        ? <><Link to='/signIn'>Masz konto? Zaloguj się</Link>
+                            <Link to='/signUp'> / Nie masz konta? Zarejestruj się</Link></>
                         : props.isSignUp
                             ? <Link to='/signIn'>Masz konto? Zaloguj się</Link>
                             : <Link to='/signUp'>Nie masz konta? Zarejestruj się</Link>

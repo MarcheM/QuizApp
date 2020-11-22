@@ -5,6 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import firebase from 'firebase';
 
+export const difficultyLevels = ["łatwy", 'średni', "trudny"]
+
 const firebaseConfig = {
   apiKey: "AIzaSyAflUq88j_iADrxWwKlG1s6frCgJPxs4RY",
   authDomain: "quiz-56bc5.firebaseapp.com",

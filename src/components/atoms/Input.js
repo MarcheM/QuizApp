@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './atoms.module.css'
+import styles from '../styles/atoms.module.css'
 
 const Input = ({ type, name, value, capture, handleOnChange }) => {
 
@@ -10,8 +10,8 @@ const Input = ({ type, name, value, capture, handleOnChange }) => {
     return <>
 
         <div className={styles.textField}>
-            <input type={type} name={name} value={value} onChange={hereHandleOnChange} required />
-            <label>{capture}</label>
+            <input className={styles.inputText} type={type} name={name} value={value} onChange={hereHandleOnChange} required />
+            <label className={styles.labelInputText}>{capture}</label>
         </div>
 
 

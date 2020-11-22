@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import firebase from 'firebase'
 import { Link } from 'react-router-dom'
-import styles from "./nav.module.css"
+import styles from "../styles/nav.module.css"
 
 
 const Nav = () => {
@@ -24,8 +24,7 @@ const Nav = () => {
 
     return <div className={styles.mainWrapper}>
         <div className={styles.menu}>
-            <Link className={styles.links} to='/'><div className={styles.menuItem}>Strona Główna</div></Link>
-            <Link className={styles.links} to='/quizy'><div className={styles.menuItem}>Quizy</div></Link>
+            <Link className={styles.links} to='/'><div className={styles.menuItem}>Quizy</div></Link>
             {userState && <Link className={styles.links} to='/createQuiz'><div className={styles.menuItem}>Dodaj Quiz</div></Link>}
         </div>
         <div className={styles.loginMenu}>
@@ -33,7 +32,6 @@ const Nav = () => {
                 userState && <div className={styles.hello}> Witaj, {userState.email} </div>
             }
             {
-                console.log(userState)
             }
             {userState
                 ? <Link className={styles.links} to='/'> <div className={styles.menuItem} onClick={handleOnSignOutClick}>Wyloguj się</div></Link>
