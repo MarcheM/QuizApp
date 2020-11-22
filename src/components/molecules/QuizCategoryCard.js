@@ -4,17 +4,15 @@ import styles from '../styles/quizCategoryCard.module.css'
 const QuizCategoryCard = ({ id, title, category, difficulty }) => {
     return (
 
-        <Link to={`quizy/${id}`} style={{ color: 'black', textDecoration: "none" }}>
-            <div className={styles.quizCard}>
-                <div className={styles.quizCardCover}>
-                    <div className={styles.quizCardWrapper}>
-                        <div className={styles.quizCardInfo}>{category}</div>
-                        <div className={styles.quizCardInfo}>{difficulty.toUpperCase()}</div>
-                    </div>
-                    <div><h3>{title}</h3></div>
+        <Link to={`quizy/${id}`} className={styles.quizLink}>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <div className={styles.quizCardInfo}>{category}</div>
+            <div className={styles.quizCardInfo}>{difficulty.toUpperCase()}</div>
+            <div><h3>{title}</h3></div>
 
-                </div>
-            </div>
         </Link>
     )
 }

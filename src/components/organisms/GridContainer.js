@@ -1,8 +1,8 @@
 import React from 'react'
-
+import styles from '../styles/quizCategoryCard.module.css'
 
 const GridContainer = ({ children }) => {
-    return <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", height: "200px", gap: "10px", padding: "10px" }}>
+    return <div className={styles.linksContainer}>
         {children}
     </div>
 }
