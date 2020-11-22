@@ -14,6 +14,7 @@ const QuizList = () => {
 
 
 
+
     const fetchData = () => {
         setIsLoading(true)
         fetch(`${DATABASE_URL}/quiz.json`)
@@ -36,25 +37,25 @@ const QuizList = () => {
             })
     }
 
-    const onCategorySort = (eventValue) => {
-        setCategorySort(eventValue)
-    }
-
-    useEffect(() => {
-        filtrQuiz()
-    }, [categorySort])
-
-    const filtrQuiz = () => {
-        if (categorySort !== "none") {
-            const filteredArray = quizList.filter((tempQues) => {
-                return tempQues.category.toUpperCase() === categorySort
+    const onCategorySort = (searchCondition) => {
+        const finalArray = quizList.filter(tempQues => {
+            if (searchCondition.categories !== "none") {
+                return tempQues.category.toUpperCase() === searchCondition.categories
+            } else {
+                return tempQues
+            }
+        })
+            .filter(tempQues2 => {
+                if (searchCondition.difficulty !== "none") {
+                    return tempQues2.diff === searchCondition.difficulty
+                } else {
+                    return tempQues2
+                }
             })
-            setFilteredList(filteredArray)
-        } else {
-            setFilteredList(quizList)
-        }
-    }
 
+        return setFilteredList(finalArray)
+
+    }
 
     const getCategory = (list) => {
         let categoryList = list.map((ques) => {
