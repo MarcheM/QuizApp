@@ -8,6 +8,7 @@
 
 
   .quizLink{
+    height: 100px;
     position: relative;
     padding: 20px 50px;
     text-decoration: none;
