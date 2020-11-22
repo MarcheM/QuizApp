@@ -9,11 +9,18 @@ const QuizCategoryCard = ({ id, title, category, difficulty }) => {
             <span></span>
             <span></span>
             <span></span>
-            <div className={styles.quizCardInfo}>{category}</div>
-            <div className={styles.quizCardInfo}>{difficulty.toUpperCase()}</div>
-            <div><h3>{title}</h3></div>
+            <div>
+                <div >
+                    <div>
+                        <div>{category}</div>
+                        <div >{difficulty.toUpperCase()}</div>
+                    </div>
+                    <div><h3>{title}</h3></div>
 
+                </div>
+            </div>
         </Link>
+
     )
 }
 
