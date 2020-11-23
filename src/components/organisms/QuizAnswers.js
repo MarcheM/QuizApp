@@ -8,20 +8,13 @@ const QuizAnswers = ({ singleQuiz, quesNumber, handleOnAnswerClick }) => {
 
     useEffect(() => {
         setShufledAnswers(shuffle(singleQuiz[quesNumber].ans))
+        setIsShowAnswer(false)
     }, [quesNumber])
-
-    useEffect(() => {
-        setTimeout(() => setIsShowAnswer(false), 700)
-    }, [isShowAnswer])
 
     const onHandleOnAnswerClick = (answer) => {
         setIsShowAnswer(true)
         setTimeout(() => handleOnAnswerClick(answer), 800)
     }
-
-
-
-
 
     function shuffle(array) {
         let currentIndex = array.length, temporaryValue, randomIndex;
