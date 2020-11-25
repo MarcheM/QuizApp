@@ -13,7 +13,7 @@ const QuizAnswers = ({ singleQuiz, quesNumber, handleOnAnswerClick }) => {
 
     const onHandleOnAnswerClick = (answer) => {
         setIsShowAnswer(true)
-        setTimeout(() => handleOnAnswerClick(answer), 800)
+        setTimeout(() => handleOnAnswerClick(answer), 1100)
     }
 
     const shuffle = (array) => {

@@ -72,14 +72,16 @@ const QuizList = () => {
     }
 
     return <MainContent title="Wybierz Quiz">
-        <SearchBar categories={getCategory(quizList)} handleOnChange={onCategorySort} />
-        <GridContainer>
-            {
-                filteredList.map(quiz =>
-                    <QuizCategoryCard key={quiz.id} id={quiz.id} title={quiz.title} category={quiz.category.toUpperCase()} difficulty={quiz.diff} />
-                )
-            }
-        </GridContainer>
+        <div style={{ height: "100%", background: "linear-gradient(-30deg, #341ee9 0%,#00000a 50%,#dc1010 50%,#000000 100% )", padding: "8px" }}>
+            <SearchBar categories={getCategory(quizList)} handleOnChange={onCategorySort} />
+            <GridContainer>
+                {
+                    filteredList.map(quiz =>
+                        <QuizCategoryCard key={quiz.id} id={quiz.id} title={quiz.title} category={quiz.category.toUpperCase()} difficulty={quiz.diff} />
+                    )
+                }
+            </GridContainer>
+        </div>
     </MainContent>
 
 }

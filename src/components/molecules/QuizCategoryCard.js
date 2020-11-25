@@ -15,7 +15,7 @@ const QuizCategoryCard = ({ id, title, category, difficulty }) => {
                         <div>{category}</div>
                         <div >{difficulty.toUpperCase()}</div>
                     </div>
-                    <div><h3>{title}</h3></div>
+                    <div><h4>{title}</h4></div>
 
                 </div>
             </div>

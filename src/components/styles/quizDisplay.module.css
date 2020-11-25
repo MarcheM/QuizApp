@@ -1,11 +1,13 @@
 .answers,
 .answersCorrect{
-    font-size: 30px;
+    font-size: 2em;
     padding: 40px;
     border: 2px solid #eee;
     cursor: pointer;
     border-radius: 16px;
     background-color: transparent;
+    width: 40%;
+    margin: 1em 0;
 }
 
 .answers:hover{

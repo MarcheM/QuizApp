@@ -1,19 +1,15 @@
 .linksContainer{
-  height: 100%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1em;
-  background: linear-gradient(-30deg, #341ee9 0%,#00000a 50%,#dc1010 50%,#000000 100% );
+  grid-gap: 1em; 
 }
-
-
   .quizLink{
     height: 100px;
     position: relative;
     padding: 20px 50px;
     text-decoration: none;
     color: #fff;
-    font-size: 2em;
+    font-size: 1em;
     text-transform: uppercase;
     font-family: sans-serif;
     letter-spacing: 4px;

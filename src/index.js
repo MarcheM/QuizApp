@@ -14,8 +14,8 @@ const firebaseConfig = {
   projectId: "quiz-56bc5",
   storageBucket: "quiz-56bc5.appspot.com",
   messagingSenderId: "727150599646",
-  appId: "1:727150599646:web:9eef356b8dd0fd37d6d14f",
-  measurementId: "G-QRYZ6J9N2Q"
+  appId: "1:727150599646:web:04cd72c721b80fd0d6d14f",
+  measurementId: "G-W8NR0S438R"
 };
 
 export const DATABASE_URL = firebaseConfig.databaseURL;
