@@ -9,7 +9,6 @@ import CreateQuiz from './components/pages/CreateQuiz'
 const Content = () => {
     return <Switch>
         <Route exact path='/' component={QuizList} />
-        {/* <Route exact path='/quizy' component={QuizList} /> */}
         <Route path='/quizy/:id' component={SingleQuiz} />
         <Route path='/createQuiz' component={CreateQuiz} />
         <Route path='/signIn' component={LogIn} />

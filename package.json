@@ -1,6 +1,6 @@
 {
   "name": "quiz",
-  "homepage": "https://marchem.github.io/QuizApp/",
+  "homepage": "http://marchem.github.io/QuizApp/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
