@@ -22,23 +22,25 @@ const Nav = () => {
     }
 
 
-    return <div className={styles.mainWrapper}>
+    return <div className={styles.mainBar}>
+        <div className={styles.finalThreedeeTypo}>Quiz-App!</div>
         <div className={styles.menu}>
+
             <Link className={styles.links} to='/'><div className={styles.menuItem}>Quizy</div></Link>
             {userState && <Link className={styles.links} to='/createQuiz'><div className={styles.menuItem}>Dodaj Quiz</div></Link>}
+
+
         </div>
-        <div className={styles.loginMenu}>
+        <div className={styles.login}>
             {
                 userState && <div className={styles.hello}> Witaj, {userState.email} </div>
-            }
-            {
             }
             {userState
                 ? <Link className={styles.links} to='/'> <div className={styles.menuItem} onClick={handleOnSignOutClick}>Wyloguj się</div></Link>
                 : <Link className={styles.links} to='/signIn'> <div className={styles.menuItem}>Zaloguj się</div></Link>
             }
-
         </div>
+
     </div >
 
 }

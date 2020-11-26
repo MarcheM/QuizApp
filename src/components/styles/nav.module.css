@@ -1,28 +1,50 @@
 
-.mainWrapper{
+.mainBar{
     width: 100%;
     position: sticky;
     background-image: white;
-    display: flex;
-    justify-content: space-between;  
-    align-items: center;
     padding: 2em;
-    border-bottom: #222;
+    border-bottom: 1px solid #222;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3em;
 }
+.finalThreedeeTypo{
+    flex-grow:1;
+    font-size: 3em;
+    text-transform: uppercase;
+    color: #f2395a;
+    transform: skew(-5deg, -5deg) rotate(-2deg);
+    transform-origin: center center;
+    text-shadow: 1px 1px #d10e31,
+                 2px 2px #d10e31,
+                 3px 3px #d10e31,
+                 4px 4px #d10e31,
+                 5px 5px #d10e31,
+                 6px 6px #d10e31,
+                 7px 7px #d10e31,
+                 8px 8px #890920,
+                 9px 9px #890920,
+                 10px 10px #890920,
+                 11px 11px 15px rgba(0,0,0,0.5);
+  }
 
 .menu{
     display: flex;
-}
-
-.loginMenu{
-    justify-content: flex-end;
-    display: flex;
+    justify-content: center;
+    flex-grow: 3
 }
 
 .hello{
-    margin: 0 16px;
-    padding: 15px;
-    border-radius: 8px;
+    align-self: center;
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    flex-grow: 1
 }
 
 .menuItem{ 
@@ -40,17 +62,4 @@
 .menuItem:hover{
     background-color: #525252;
     cursor: pointer;
-}
-
-@media (max-width: 756px){
-    .mainWrapper{
-        width: 100%;
-        border-radius: 0px; 
-    }
-    .menuWrapper{
-        margin-top: 1rem;
-    }
-    .menuItem{
-        padding: 12px 2px;
-    } 
 }
