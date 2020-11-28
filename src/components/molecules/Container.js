@@ -1,7 +1,8 @@
 import React from 'react'
+import '../../index.css'
 
 const Container = ({ children }) => {
-    return <div style={{ backgroundColor: "rgba(256, 256, 256, 0.6)", width: "95%", maxWidth: '1400px', height: "75vh", margin: "0 auto", border: "4px solid #B6CFF9" }} >
+    return <div className="container" >
         {children}
 
     </div >

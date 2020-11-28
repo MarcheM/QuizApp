@@ -1,9 +1,8 @@
 
 .mainBar{
-    width: 100%;
     position: sticky;
     background-image: white;
-    padding: 2em;
+    padding: 1.2em;
     border-bottom: 1px solid #222;
     box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
     display: flex;
@@ -13,22 +12,19 @@
 }
 .finalThreedeeTypo{
     flex-grow:1;
-    font-size: 3em;
+    font-size: 2.5em;
     text-transform: uppercase;
-    color: #f2395a;
+    color: #f00;
     transform: skew(-5deg, -5deg) rotate(-2deg);
     transform-origin: center center;
-    text-shadow: 1px 1px #d10e31,
-                 2px 2px #d10e31,
-                 3px 3px #d10e31,
-                 4px 4px #d10e31,
-                 5px 5px #d10e31,
-                 6px 6px #d10e31,
-                 7px 7px #d10e31,
-                 8px 8px #890920,
-                 9px 9px #890920,
-                 10px 10px #890920,
-                 11px 11px 15px rgba(0,0,0,0.5);
+    text-shadow: 1px 1px #c00,
+                 2px 2px #c00,
+                 3px 3px #c00,
+                 4px 4px #c00,
+                 5px 5px #c00,
+                 6px 6px #900,
+                 7px 7px #900,
+                 8px 8px 8px rgba(0,0,0,0.5);
   }
 
 .menu{
@@ -57,9 +53,10 @@
 .links{
     text-decoration: none;
     color: #222;
+    margin: 1em;
 }
 
 .menuItem:hover{
-    background-color: #525252;
+    background-color: #f00;
     cursor: pointer;
 }

@@ -5,20 +5,11 @@ const QuizCategoryCard = ({ id, title, category, difficulty }) => {
     return (
 
         <Link to={`quizy/${id}`} className={styles.quizLink}>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <div>
-                <div >
-                    <div>
-                        <div>{category}</div>
-                        <div >{difficulty.toUpperCase()}</div>
-                    </div>
-                    <div><h4>{title}</h4></div>
-
-                </div>
+            <div className={styles.quizDetails}>
+                <div>{category}</div>
+                <div>{difficulty.toUpperCase()}</div>
             </div>
+            <div className={styles.title}><h4>{title}</h4></div>
         </Link>
 
     )

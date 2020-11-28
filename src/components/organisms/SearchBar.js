@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { difficultyLevels } from '../../index'
 import SortForm from '../atoms/SortForm'
+import styles from '../styles/quizCategoryCard.module.css'
 
 const SearchBar = ({ categories, handleOnChange }) => {
 
@@ -24,7 +25,7 @@ const SearchBar = ({ categories, handleOnChange }) => {
     }, [searchConditions])
 
     return (
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <div className={styles.searchBar}>
             <SortForm array={categories} name="kategoria:" id="categories" sortFunction={sortValue} />
             <SortForm array={difficultyLevels} name="poziom trudności:" id="difficulty" sortFunction={sortValue} />
         </div>
