@@ -23,7 +23,7 @@ const Nav = () => {
 
 
     return <div className={styles.mainBar}>
-        <div className={styles.finalThreedeeTypo}>Quiz-App!</div>
+        <Link to='/' className={styles.finalThreedeeTypo}>Quiz-App!</Link >
         <div className={styles.menu}>
 
             <Link className={styles.links} to='/'><div className={styles.menuItem}>Quizy</div></Link>

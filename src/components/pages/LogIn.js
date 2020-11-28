@@ -59,7 +59,7 @@ const LogIn = (props) => {
 
     return <MainContent title="Logowanie">
         <QuizTemplate>
-            <div style={{ display: "flex", flexDirection: 'column', justifyContent: 'center', height: '100%' }}>
+            <div style={{ display: "flex", flexDirection: 'column', justifyContent: 'center' }}>
                 <form onSubmit={handleOnSubmit}>
 
                     <Input type="email" name="login" value={loginData.login} capture="Podaj maila" handleOnChange={handleOnChange} />

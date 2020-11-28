@@ -11,6 +11,7 @@
     margin-bottom: 3em;
 }
 .finalThreedeeTypo{
+    text-decoration: none;
     flex-grow:1;
     font-size: 2.5em;
     text-transform: uppercase;
