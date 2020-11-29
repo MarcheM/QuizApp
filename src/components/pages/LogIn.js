@@ -58,35 +58,35 @@ const LogIn = (props) => {
     }
 
     return <MainContent title="Logowanie">
-        <QuizTemplate>
-            <div style={{ display: "flex", flexDirection: 'column', justifyContent: 'center' }}>
-                <form onSubmit={handleOnSubmit}>
 
-                    <Input type="email" name="login" value={loginData.login} capture="Podaj maila" handleOnChange={handleOnChange} />
-                    {!props.isReset && <Input type="password" name="password" value={loginData.password} capture="Wpisz hasło" handleOnChange={handleOnChange} />}
-                    <div style={{ width: "30%", margin: "0 auto" }}>
-                        {props.isReset
-                            ? <button type="submit" style={{ width: "100%", padding: "0.8rem", borderRadius: "8px", backgroundColor: "darkblue", color: "white" }}>Resetuj hasło</button>
-                            : props.isSignUp
-                                ? <button type="submit" style={{ width: "100%", padding: "0.8rem", borderRadius: "8px", backgroundColor: "darkblue", color: "white" }}>Zarejestruj się</button>
-                                : <button type="submit" style={{ width: "100%", padding: "0.8rem", borderRadius: "8px", backgroundColor: "darkblue", color: "white" }}>Zaloguj</button>
-                        }
-                    </div>
-                </form>
-                <SignInGoogle />
-                <p>
+        <div style={{ display: "flex", flexDirection: "column", justifyContent: 'center', alignItems: "center", width: "60%", backgroundColor: "rgba(256,256,256, 0.8)" }}>
+            <form style={{ width: "100%" }} onSubmit={handleOnSubmit}>
+
+                <Input type="email" name="login" value={loginData.login} capture="Podaj maila" handleOnChange={handleOnChange} />
+                {!props.isReset && <Input type="password" name="password" value={loginData.password} capture="Wpisz hasło" handleOnChange={handleOnChange} />}
+                <div style={{ width: "95%", margin: "0 auto" }}>
                     {props.isReset
-                        ? <><Link to='/signIn'>Masz konto? Zaloguj się</Link>
-                            <Link to='/signUp'> / Nie masz konta? Zarejestruj się</Link></>
+                        ? <button type="submit" style={{ width: "100%", padding: "0.8rem", borderRadius: "8px", backgroundColor: "darkblue", color: "white" }}>Resetuj hasło</button>
                         : props.isSignUp
-                            ? <Link to='/signIn'>Masz konto? Zaloguj się</Link>
-                            : <Link to='/signUp'>Nie masz konta? Zarejestruj się</Link>
+                            ? <button type="submit" style={{ width: "100%", padding: "0.8rem", borderRadius: "8px", backgroundColor: "darkblue", color: "white" }}>Zarejestruj się</button>
+                            : <button type="submit" style={{ width: "100%", padding: "0.8rem", borderRadius: "8px", backgroundColor: "darkblue", color: "white" }}>Zaloguj</button>
                     }
-                    {!props.isReset && <Link to='/resetMail'> / Zapomniałeś hasła?</Link>}
+                </div>
+            </form>
+            <SignInGoogle />
+            <p>
+                {props.isReset
+                    ? <><Link to='/signIn'>Masz konto? Zaloguj się</Link>
+                        <Link to='/signUp'> / Nie masz konta? Zarejestruj się</Link></>
+                    : props.isSignUp
+                        ? <Link to='/signIn'>Masz konto? Zaloguj się</Link>
+                        : <Link to='/signUp'>Nie masz konta? Zarejestruj się</Link>
+                }
+                {!props.isReset && <Link to='/resetMail'> / Zapomniałeś hasła?</Link>}
 
-                </p>
-            </div>
-        </QuizTemplate>
+            </p>
+        </div>
+
     </MainContent >
 }
 

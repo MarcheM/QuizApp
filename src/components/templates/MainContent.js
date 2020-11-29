@@ -2,13 +2,14 @@ import React from 'react'
 import Nav from '../organisms/Nav'
 import Container from '../molecules/Container'
 import Footer from '../organisms/Footer'
-const MainContent = ({ children }) => {
+
+const MainContent = ({ title, children }) => {
 
     return (
 
-        <div>
+        <div style={{ height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
             <Nav />
-            <Container>
+            <Container title={title} >
                 {children}
             </Container>
             <Footer />
