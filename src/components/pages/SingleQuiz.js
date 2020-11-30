@@ -70,17 +70,16 @@ const SingleQuiz = (props) => {
 
     return <MainContent title={protoQuiz.title}>
 
-        <QuizTemplate>
-            {singleQuiz.length > 0
-                ?
-                quesNumber !== singleQuiz.length
-                    ? <QuizCard protoQuiz={protoQuiz} singleQuiz={singleQuiz} quesNumber={quesNumber}>
-                        <QuizAnswers singleQuiz={singleQuiz} quesNumber={quesNumber} handleOnAnswerClick={handleOnAnswerClick} />
-                    </QuizCard>
-                    : <Score score={score} />
-                : <Spinner />
-            }
-        </QuizTemplate>
+
+        {singleQuiz.length > 0
+            ?
+            quesNumber !== singleQuiz.length
+                ? <QuizCard protoQuiz={protoQuiz} singleQuiz={singleQuiz} quesNumber={quesNumber}>
+                    <QuizAnswers singleQuiz={singleQuiz} quesNumber={quesNumber} handleOnAnswerClick={handleOnAnswerClick} />
+                </QuizCard>
+                : <Score score={score} />
+            : <Spinner />
+        }
 
     </MainContent >
 }
