@@ -14,6 +14,7 @@ const SingleQuiz = (props) => {
     const [quesNumber, setQuesNumber] = useState(0)
     const [score, setScore] = useState(0)
 
+
     const fetchQuizData = () => {
         fetch(`${DATABASE_URL}/quiz/${props.match.params.id}.json`)
             .then(res => res.json())
@@ -77,7 +78,7 @@ const SingleQuiz = (props) => {
                 ? <QuizCard protoQuiz={protoQuiz} singleQuiz={singleQuiz} quesNumber={quesNumber}>
                     <QuizAnswers singleQuiz={singleQuiz} quesNumber={quesNumber} handleOnAnswerClick={handleOnAnswerClick} />
                 </QuizCard>
-                : <Score score={score} />
+                : <Score score={score} quesLength={protoQuiz.Ques.length} />
             : <Spinner />
         }
 
