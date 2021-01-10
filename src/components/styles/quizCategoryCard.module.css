@@ -41,6 +41,7 @@ background-color: #414141;
 .quizLink:active{
     top: 4px;
     left: -4px;
+    transform: scale(1);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -55,4 +56,10 @@ background-color: #414141;
 .title{
     text-align: start;
     padding: 0.5em
+}
+
+@media (max-width: 756px){
+    .gridContainer{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

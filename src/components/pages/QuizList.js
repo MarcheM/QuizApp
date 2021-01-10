@@ -24,7 +24,7 @@ const QuizList = () => {
                                 id: key,
                                 ...quiz[key]
                             }
-                        })
+                        }).reverse()
                     : []
 
                 setQuizList(listOfQuiz)

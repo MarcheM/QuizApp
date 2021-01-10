@@ -1,7 +1,7 @@
 .answers,
 .answersCorrect{
     font-size: 1.5em;
-    width: 40%;
+    width: 42%;
     padding: 40px;
     border: 1px solid #333;
     cursor: pointer;
@@ -22,4 +22,10 @@
 
 .answersCorrect{
     background-color: green;
+}
+
+@media (max-width: 756px){
+    .answers{
+        width: 90%;
+    }
 }

@@ -1,6 +1,5 @@
 
 .mainBar{
-    position: sticky;
     background-image: white;
     padding: 1.2em;
     border-bottom: 1px solid #222;
@@ -60,4 +59,14 @@
 .menuItem:hover{
     background-color: #f00;
     cursor: pointer;
+}
+
+@media (max-width:756px){
+    .menuItem{
+        margin: 0 4px;
+        padding: 8px;
+    }
+    .links{
+        margin: 0.5em
+    }
 }
