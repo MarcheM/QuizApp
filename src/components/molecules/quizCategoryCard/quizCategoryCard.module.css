@@ -1,18 +1,3 @@
-.gridContainer{
-    padding: 2em;
-    display: grid;
-    gap: 1.5em;
-    grid-template-columns: repeat(5, 1fr);
-}
-
-.searchBar{
-    display: flex;
-    justify-content: space-around;
-    padding: 1em;
-    background-color: #414141;
-    background-image: linear-gradient(#414141,#272727);
-    color: white;
-}
 
 .quizLink{
     display: flex;

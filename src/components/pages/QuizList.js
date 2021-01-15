@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { DATABASE_URL } from '../../index'
 import MainContent from '../templates/MainContent'
-import GridContainer from '../organisms/GridContainer'
-import Spinner from '../atoms/Spinner'
-import QuizCategoryCard from '../molecules/QuizCategoryCard'
-import SearchBar from '../organisms/SearchBar'
+import GridContainer from '../organisms/gridContainer/GridContainer'
+import Spinner from '../atoms/spinner/Spinner'
+import QuizCategoryCard from '../molecules/quizCategoryCard/QuizCategoryCard'
+import SearchBar from '../organisms/searchBar/SearchBar'
 
 const QuizList = () => {
     const [quizList, setQuizList] = useState([])

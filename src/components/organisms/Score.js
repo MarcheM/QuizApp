@@ -1,5 +1,5 @@
 import React from "react"
-import AnimatedProgressProvider from '../molecules/AnimatedProgressProvider'
+import AnimatedProgressProvider from '../molecules/animatedProgressProvider/AnimatedProgressProvider'
 import {
     CircularProgressbar,
     buildStyles

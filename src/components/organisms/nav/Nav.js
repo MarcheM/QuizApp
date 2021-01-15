@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import firebase from 'firebase'
 import { Link } from 'react-router-dom'
-import styles from "../styles/nav.module.css"
+import styles from "./nav.module.css"
 
 
 const Nav = () => {
@@ -27,7 +27,7 @@ const Nav = () => {
         <div className={styles.menu}>
 
             <Link className={styles.links} to='/'><div className={styles.menuItem}>Quizy</div></Link>
-            {userState && <Link className={styles.links} to='/createQuiz'><div className={styles.menuItem}>Dodaj Quiz</div></Link>}
+            <Link className={styles.links} to='/createQuiz'><div className={styles.menuItem}>Dodaj Quiz</div></Link>
 
 
         </div>

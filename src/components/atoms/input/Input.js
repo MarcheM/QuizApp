@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/atoms.module.css'
+import styles from './input.module.css'
 
 const Input = ({ type, name, value, capture, handleOnChange }) => {
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../styles/quizCategoryCard.module.css'
+import styles from './gridContainer.module.css'
 
 const GridContainer = ({ children }) => {
     return <div className={styles.gridContainer}>

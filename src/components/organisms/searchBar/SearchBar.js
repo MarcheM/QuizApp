@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { difficultyLevels } from '../../index'
-import SortForm from '../atoms/SortForm'
-import styles from '../styles/quizCategoryCard.module.css'
+import { difficultyLevels } from '../../../index'
+import SortForm from '../../atoms/sortForm/SortForm'
+import styles from './searchBar.module.css'
 
 const SearchBar = ({ categories, handleOnChange }) => {
 

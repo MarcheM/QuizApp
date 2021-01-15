@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { DATABASE_URL } from '../../index'
 import MainContent from '../templates/MainContent'
-import QuizTemplate from '../templates/QuizTemplate'
 import QuizCard from '../organisms/QuizCard'
 import Score from '../organisms/Score'
-import Spinner from '../atoms/Spinner'
+import Spinner from '../atoms/spinner/Spinner'
 import QuizAnswers from '../organisms/QuizAnswers'
 
 const SingleQuiz = (props) => {

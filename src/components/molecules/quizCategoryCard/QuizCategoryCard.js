@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import styles from '../styles/quizCategoryCard.module.css'
+import styles from './quizCategoryCard.module.css'
+
 const QuizCategoryCard = ({ id, title, category, difficulty }) => {
     return (
 

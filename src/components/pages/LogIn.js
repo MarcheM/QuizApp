@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { Redirect, Link } from 'react-router-dom'
 import MainContent from '../templates/MainContent'
-import QuizTemplate from '../templates/QuizTemplate'
-import Input from '../atoms/Input'
+import Input from '../atoms/input/Input'
 import firebase from 'firebase'
 import SignInGoogle from '../organisms/SignInGoogle'
 

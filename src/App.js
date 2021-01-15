@@ -6,10 +6,7 @@ import Content from './Content'
 function App() {
   return (
     <Router>
-
       <Content />
-
-
     </Router>
   );
 }

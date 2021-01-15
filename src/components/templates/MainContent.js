@@ -1,7 +1,7 @@
 import React from 'react'
-import Nav from '../organisms/Nav'
-import Container from '../molecules/Container'
-import Footer from '../organisms/Footer'
+import Nav from '../organisms/nav/Nav'
+import Container from '../molecules/container/Container'
+import Footer from '../organisms/footer/Footer'
 
 const MainContent = ({ title, children }) => {
 

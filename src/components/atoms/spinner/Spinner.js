@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "../styles/spinner.module.css"
+import styles from "./spinner.module.css"
 
 const Spinner = () => {
     return <div style={{ display: "flex", height: "70vh", justifyContent: "center", alignItems: "center" }}>
