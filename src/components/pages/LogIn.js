@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Redirect, Link } from 'react-router-dom'
-import MainContent from '../templates/MainContent'
+import MainContent from '../templates/mainContent/MainContent'
 import Input from '../atoms/input/Input'
 import firebase from 'firebase'
 import SignInGoogle from '../organisms/SignInGoogle'

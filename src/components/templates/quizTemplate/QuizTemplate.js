@@ -1,8 +1,9 @@
 import React from 'react'
+import style from "./quizTemplate.module.css"
 
 const QuizTemplate = ({ children }) => {
 
-    return <div style={{ display: "flex", width: "50%", height: "50%", alignItems: 'center', justifyContent: "center" }}>
+    return <div className={style.quizTemplateContainer} style={{}}>
         {children}
     </div>
 }

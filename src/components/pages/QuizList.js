@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { DATABASE_URL } from '../../index'
-import MainContent from '../templates/MainContent'
+import MainContent from '../templates/mainContent/MainContent'
 import GridContainer from '../organisms/gridContainer/GridContainer'
 import Spinner from '../atoms/spinner/Spinner'
 import QuizCategoryCard from '../molecules/quizCategoryCard/QuizCategoryCard'

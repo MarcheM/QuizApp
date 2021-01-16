@@ -1,11 +1,16 @@
 import React from 'react';
-import MainContent from '../templates/MainContent'
+import MainContent from '../templates/mainContent/MainContent'
 import Auth from '../organisms/Auth'
 
 const CreateQuiz = () => {
     return (
         <Auth>
-            <MainContent title="W budowie"></MainContent>
+            <MainContent title="Dodaj Quiz">
+
+
+
+
+            </MainContent>
         </Auth>);
 }
 

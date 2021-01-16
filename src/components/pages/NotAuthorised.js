@@ -1,6 +1,6 @@
 import React from 'react';
-import MainContent from '../templates/MainContent'
-import QuizTemplate from '../templates/QuizTemplate'
+import MainContent from '../templates/mainContent/MainContent'
+import QuizTemplate from '../templates/quizTemplate/QuizTemplate'
 
 const NotAuthorised = () => {
     return (

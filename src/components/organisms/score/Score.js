@@ -1,12 +1,11 @@
 import React from "react"
-import AnimatedProgressProvider from '../molecules/animatedProgressProvider/AnimatedProgressProvider'
+import AnimatedProgressProvider from '../../molecules/animatedProgressProvider/AnimatedProgressProvider'
 import {
     CircularProgressbar,
     buildStyles
 } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-
-// Animation
+import styles from './score.module.css'
 import { easeQuad } from "d3-ease";
 
 
@@ -16,8 +15,8 @@ const Score = ({ score, quesLength }) => {
     const perScore = Math.round(score / quesLength * 100)
 
     return <>
-        <h1 style={{ padding: "24px" }}>{`Twój wynik: ${perScore}%`}</h1>
-        <div style={{ width: "30%", margin: "0 auto" }}>
+        <h1 className={styles.mainText}>{`Twój wynik: ${perScore}%`}</h1>
+        <div className={styles.scoreBox}>
             <AnimatedProgressProvider
                 valueStart={0}
                 valueEnd={perScore}

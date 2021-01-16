@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import styles from '../styles/quizDisplay.module.css'
+import styles from './quizAnswers.module.css'
 
 const QuizAnswers = ({ singleQuiz, quesNumber, handleOnAnswerClick }) => {
 
