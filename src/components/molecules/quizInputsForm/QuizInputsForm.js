@@ -1,17 +1,38 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Input from '../../atoms/input/Input'
 import styles from './quizInputsForm.module.css'
-import style from '../../organisms/quizCard/quizCard.module.css'
+
+const initialState = {
+    ques: "",
+    ans1: "",
+    ans2: "",
+    ans3: "",
+    ans4: "",
+}
 
 const QuizInputsForm = () => {
+
+    const [answers, setAnswers] = useState(initialState)
+
+    const handleOnChange = (event) => {
+        setAnswers({
+            ...answers,
+            [event.target.name]: event.target.value
+        })
+    }
+
+    useEffect(() => {
+        console.log(answers)
+    }, [answers])
+
     return (
         <>
-            <div className={style.quizQues}><Input type="text" name="Podaj pytanie" value="" capture="Podaj pytanie" /></div>
+            <div><Input type="text" name="ques" value={answers.ques} capture="Podaj pytanie" handleOnChange={handleOnChange} /></div>
             <div className={styles.answerInputContainer}>
-                <Input type="text" name="Ans1" value="" capture="poprawna odpowiedź" />
-                <Input type="text" name="Ans2" value="" capture="odpowiedź 2" />
-                <Input type="text" name="Ans3" value="" capture="odpowiedź 3" />
-                <Input type="text" name="Ans4" value="" capture="odpowiedź 4" />
+                <Input type="text" name="ans1" value={answers.ans1} capture="poprawna odpowiedź" handleOnChange={handleOnChange} />
+                <Input type="text" name="ans2" value={answers.ans2} capture="odpowiedź 2" handleOnChange={handleOnChange} />
+                <Input type="text" name="ans3" value={answers.ans3} capture="odpowiedź 3" handleOnChange={handleOnChange} />
+                <Input type="text" name="ans4" value={answers.ans4} capture="odpowiedź 4" handleOnChange={handleOnChange} />
 
             </div>
         </>
