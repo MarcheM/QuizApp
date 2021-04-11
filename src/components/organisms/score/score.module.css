@@ -6,3 +6,12 @@
     width: 30%;
     margin: 0 auto;
 }
+
+@media (max-width: 600px){
+    .mainText{
+        padding: 8px;
+    }
+    .scoreBox{
+        width: 60vw;
+    }
+}

@@ -26,8 +26,8 @@ const SearchBar = ({ categories, handleOnChange }) => {
 
     return (
         <div className={styles.searchBar}>
-            <SortForm array={categories} name="kategoria:" id="categories" sortFunction={sortValue} />
-            <SortForm array={difficultyLevels} name="poziom trudności:" id="difficulty" sortFunction={sortValue} />
+            <SortForm array={categories} name="kategoria: " id="categories" sortFunction={sortValue} />
+            <SortForm array={difficultyLevels} name="poziom trudności: " id="difficulty" sortFunction={sortValue} />
         </div>
     )
 }
